@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         BundleQuest Helper
 // @namespace    http://www.bundlequest.com/
-// @version      1.0
+// @version      1.1
 // @description  Makes your life easier!
 // @author       Archi
-// @match        http://www.steamgifts.com/giveaways/new
+// @match        https://www.steamgifts.com/giveaways/new
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
