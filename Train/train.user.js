@@ -14,7 +14,7 @@
 /* Customization */
 
 // Default giveaway time (in milliseconds, time before the giveaways ends, one hour will be added to prevent SG fuckups)
-var TRAIN_TIME = 1 * 24 * 60 * 60 * 1000; // 1 day recommended
+const TRAIN_TIME = 1 * 24 * 60 * 60 * 1000; // 1 day recommended
 
 /* END */
 
@@ -61,11 +61,11 @@ function formatDate(date) {
 	// Fix minutes
 	let minutes = date.getMinutes();
 	if (minutes < 10) {
-		minutes = '0' + minutes;
+		minutes = `0${minutes}`;
 	}
 
 	// Return result
-	return $.datepicker.formatDate('M d, yy', date) + " " + hours + ":" + minutes + " " + ampm;
+	return `${$.datepicker.formatDate('M d, yy', date)} ${hours}:${minutes} ${ampm}`;
 }
 
 
@@ -74,7 +74,7 @@ $("#trainBtn").css({
 	'height': '32px'
 });
 
-$("#trainBtn").click(function() {
+$("#trainBtn").click(() => {
 	applyDates();
 	applyDescription();
 	applyRegionRestrictions();
