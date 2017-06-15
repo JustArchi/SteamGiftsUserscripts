@@ -14,11 +14,11 @@
 /* Customization */
 
 // Default giveaway time (in milliseconds, time before the giveaways ends, one hour will be added to prevent SG fuckups)
-var BQ_TIME = 2 * 24 * 60 * 60 * 1000; // 2 days recommended
+const BQ_TIME = 2 * 24 * 60 * 60 * 1000; // 2 days recommended
 
 /* END */
 
-var GROUP_ID = 702;
+const GROUP_ID = 702;
 
 function applyDates() {
 	let startingDate = new Date();
@@ -29,7 +29,7 @@ function applyDates() {
 
 function applyGroup() {
 	$("div[data-checkbox-value='groups']").trigger("click");
-	let groupButton = $("div[data-group-id='" + GROUP_ID + "']");
+	let groupButton = $(`div[data-group-id='${GROUP_ID}']`);
 	if (!groupButton.hasClass('is-selected')) {
 		groupButton.trigger("click");
 	}
@@ -60,11 +60,11 @@ function formatDate(date) {
 	// Fix minutes
 	let minutes = date.getMinutes();
 	if (minutes < 10) {
-		minutes = '0' + minutes;
+		minutes = `0${minutes}`;
 	}
 
 	// Return result
-	return $.datepicker.formatDate('M d, yy', date) + " " + hours + ":" + minutes + " " + ampm;
+	return `${$.datepicker.formatDate('M d, yy', date)} ${hours}:${minutes} ${ampm}`;
 }
 
 
@@ -73,7 +73,7 @@ $("#dateBtn").css({
 	'height': '32px'
 });
 
-$("#dateBtn").click(function() {
+$("#dateBtn").click(() => {
 	applyDates();
 	applyRegionRestrictions();
 	applyGroup();
