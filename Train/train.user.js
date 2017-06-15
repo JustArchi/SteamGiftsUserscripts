@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ArchiTrain
 // @namespace    ArchiTrain
-// @version      0.1
+// @version      0.2
 // @description  Makes your life easier!
 // @author       Archi
 // @match        https://www.steamgifts.com/giveaways/new
