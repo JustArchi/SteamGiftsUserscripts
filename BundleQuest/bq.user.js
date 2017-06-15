@@ -14,22 +14,6 @@
 /* Customization */
 
 // Default giveaway time (in milliseconds, time before the giveaways ends, one hour will be added to prevent SG fuckups)
-// ==UserScript==
-// @name         BundleQuest Helper
-// @namespace    http://www.bundlequest.com/
-// @version      1.1
-// @description  Makes your life easier!
-// @author       Archi
-// @match        https://www.steamgifts.com/giveaways/new
-// @grant        none
-// @run-at       document-end
-// ==/UserScript==
-
-'use strict';
-
-/* Customization */
-
-// Default giveaway time (in milliseconds, time before the giveaways ends, one hour will be added to prevent SG fuckups)
 const BQ_TIME = 2 * 24 * 60 * 60 * 1000; // 2 days recommended
 
 /* END */
