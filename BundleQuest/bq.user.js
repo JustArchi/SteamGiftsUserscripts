@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BundleQuest Helper
 // @namespace    http://www.bundlequest.com/
-// @version      1.2
+// @version      1.3
 // @description  Makes your life easier!
 // @author       Archi
 // @match        https://www.steamgifts.com/giveaways/new
@@ -29,7 +29,7 @@ function applyDates() {
 
 function applyGroup() {
 	$("div[data-checkbox-value='groups']").trigger("click");
-	let groupButton = $(`div[data-group-id='${GROUP_ID}']`);
+	let groupButton = $(`div[data-item-id='${GROUP_ID}']`);
 	if (!groupButton.hasClass('is-selected')) {
 		groupButton.trigger("click");
 	}
